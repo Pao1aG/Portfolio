@@ -1,0 +1,64 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    background-color: mistyrose;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.header {
+    background-color: grey;
+    color: white;
+    margin-top: -15px;
+    display: block;
+
+}
+
+h1{
+    text-align: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.header-image{
+    height:85%;
+    width: 100%;
+    position: relative;
+}
+
+.header nav ul li{
+   list-style-type: none;
+   float: right;
+   margin-right: 40px;
+   margin-bottom: 40px;
+}
+
+main{
+    display: flex;
+}
+
+aside {
+    flex: 30%;
+    flex-flow: column;
+    justify-content: center;
+    padding: 20px;
+    background-color:powderblue;
+    height:100%;
+}
+
+.content {
+    flex: 70%;
+    flex-flow: column;
+    padding: 20px;
+    background-color: rosybrown;
+    height:100%;
+}
+
+.content p{
+    font-size: 20px;
+    color:black;
+    text-decoration-line: none;
+
+}
