@@ -8,7 +8,7 @@ body {
 }
 
 .header {
-    background-color: rgb(160, 158, 158);
+    background-color: rgb(54, 95, 119);
     color: white;
     display: block;
     height: 10%;
@@ -41,7 +41,11 @@ h1 {
 .header nav ul li a {
     color: white;
     font-weight: bold;
+}
 
+/* this pseudo element removes underline from link upon hover*/
+.header nav ul li a:hover {
+    text-decoration: none;
 }
 
 /* Positions navigation header to the right of the page */
@@ -95,12 +99,12 @@ aside {
 
 #cont-me {
     position: relative;
-    top: 1214px;
+    top: 620px;
 }
 
 #res {
     position: relative;
-    top: 1214px;
+    top: 620px;
 
 }
 
@@ -137,12 +141,25 @@ aside {
     width: 48%;
 }
 
+/* this pseudo class change the cursor to pointer and border style upon hover*/
+.card:hover {
+    cursor: pointer;
+    border-style: dashed;
+}
+
+/* this pseudo class changes the background image opacity upon clicking */
+.card:active {
+    opacity: 50%;
+}
+
+/* background images were found and resized using Canva.com */
 #large-card {
     width: 97.3%; 
     background-image: url("../images/img-work1.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 
 #card2 {
     background-image: url("../images/img-work2.png");
@@ -189,7 +206,8 @@ aside {
     color: white;
     padding-left: 10px;
 }
-.work-textblock {
+
+.work-textblock 
     display: block;
     width: 29%;
     height: 90px;
@@ -211,7 +229,7 @@ aside {
 }
 
 footer {
-    background-color: rgb(160, 158, 158);
+    background-color: rgb(54, 95, 119);
     color: white;
     text-align: center;
     font-size: 18px;
@@ -242,6 +260,12 @@ footer {
     }
     #large-card {
         width: 45%;
+    }
+    #large-card .work-textblock {
+        width: 47%;
+    }
+    .work-textblock {
+        width: 47%;
     }
 }
 
