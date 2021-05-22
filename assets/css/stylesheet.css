@@ -34,6 +34,7 @@ h1 {
     width: 100%;
     margin-top: -50px;
     margin-bottom: -4px;
+    box-shadow: 0px 1px 1px black;
     position: relative;
 }
 
@@ -103,16 +104,6 @@ aside {
 
 }
 
-/* image placeholder */
-.sample-img {
-  background-color: #fff;
-  width: 100%;
-  padding: 20px;
-  height: 200px;
-  border: 1px solid black;
-  border-radius: 20px;
-}
-
 /* content-flex takes up 85% of the right side of page */
 .content-flex {
     flex: 85%;
@@ -154,37 +145,37 @@ aside {
 }
 
 #card2 {
-    background-image: url("../images/img-work1.png");
+    background-image: url("../images/img-work2.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #card3 {
-    background-image: url("../images/img-work1.png");
+    background-image: url("../images/img-work3.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #card4 {
-    background-image: url("../images/img-work1.png");
+    background-image: url("../images/img-work4.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #card5 {
-    background-image: url("../images/img-work1.png");
+    background-image: url("../images/img-work5.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #card6 {
-    background-image: url("../images/img-work1.png");
+    background-image: url("../images/img-work6.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #card7 {
-    background-image: url("../images/img-work1.png");
+    background-image: url("../images/img-work7.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -202,7 +193,7 @@ aside {
     display: block;
     width: 29%;
     height: 90px;
-    background-color: rgb(156, 97, 97);
+    background-color: rgb(185, 124, 124);
     opacity: 95%;
     color: white;
     padding-left: 10px;
@@ -231,20 +222,26 @@ footer {
 
 /* Media Query */
 @media screen and (max-width: 1260px){
+    .card {
+        width: 47%;
+    }
     #large-card {
-        width: 48%;
+        width: 47%;
+    }
+    #large-card .work-textblock {
+        width: 45%; 
+    }
+    .work-textblock {
+        width: 45%;
     }
 }
 
-@media screen and (max-width: 950px){
+@media screen and (max-width: 1050px){
     .card {
         width: 45%
     }
     #large-card {
         width: 45%;
-    }
-    .work-textblock {
-
     }
 }
 
@@ -254,5 +251,11 @@ footer {
     }
     #large-card {
         width: 100%
+    }
+    #large-card .work-textblock {
+        width: 40%; 
+    }
+    .work-textblock {
+        width: 40%;
     }
 }
