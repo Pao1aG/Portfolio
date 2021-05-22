@@ -10,59 +10,85 @@
 
   <body>
     <header class="header">
-      <h1>Paola Gonzalez</h1>
+      <div class="title-flex">
+        <h1>Paola Gonzalez</h1>
+      </div>
+      <br>
       <nav>
           <ul>
               <li>
-                <a href="#about-me">About Me</a>
+                <a href="#abt-me">About Me </a>
               </li>
               <li>
-                <a href="#work">Work</a>
+                <a href="#wrk">Work </a>
               </li>
               <li>
-                <a href="#contact-me">Contact Me
+                <a href="#cont-me">Contact Me </a>
               </li>
               <li>
-                <a href="#resume">Resume
+                <a href="#res">Resume </a>
               </li>
           </ul>
       </nav>
-      <!-- insert image here -->
      <img src="assets/images/header-image.png" class="header-image" />
     </header>
 
     <main>
         <aside>
-            <h2 id="about-me">About Me</h2>
-            <h2 id="work">Work</h2>
-            <h2 id="contact-me">Contact Me</h2>
-            <h2>Resume</h2>
+            <h2 id="abt-me">About Me</h2>
+            <h2 id="wrk">Work</h2>
+            <h2 id="cont-me">Contact Me</h2>
+            <h2 id="res">Resume</h2>
         </aside>
 
-        <section class="content">
-           <article>
-                <p>
-                    This is where I will write about myself.
-                </p>
-           </article>
-           <article>
-               <p>
-                   This is where I will feature my projects.
-               </p>
-           </article>
-           <article>
-                <p>
-                    This is where I will put my email address, github, etc.
-                </p>
-           </article>
-           <article id="resume">
-               <p>
-                   This is where I will either write in my resume with a scroll option or a link.
-               </p>
-           </article>
-        </section>
+        <div class="content-flex">
+          <article class="about">
+            <p> This is where I will write about myself</p>
+            <p>this is where I will put a picture of myself</p>
+          </article>
+
+          <article class="work">
+            <section class="card" id="large-card">
+              <h2> This is the title of Work 1</h2>
+              <div class="sample-img">Image</div> 
+            </section>
+            <section class="card">
+              <h2> This is the title of Work 2</h2>
+              <div class="sample-img">Image</div>
+            </section>
+            <section class="card">
+              <h2> This is the title of Work 3 </h2>
+              <div class="sample-img">Image</div>
+            </section>
+            <section class="card">
+              <h2> This is the title of Work 4</h2>
+              <div class="sample-img">Image</div>
+            </section>
+            <section class="card">
+              <h2> This is the title of Work 5</h2>
+              <div class="sample-img">Image</div>
+            </section>
+            <section class="card">
+              <h2> This is the title of Work 6</h2>
+              <div class="sample-img">Image</div>
+            </section>
+            <section class="card">
+              <h2> This is the title of Work 7</h2>
+              <div class="sample-img">Image</div>
+            </section>
+          </article>
+
+          <article class= "contact">
+            <h2> This is where I will put my contact info</h2>
+          </article>
+
+          <article class="resume">
+            <h2> This is where I will link my resume </h2>
+          </article>
+        </div>
     </main>
-
-
+    <footer>
+      <p>This is where I will have some writing and an image perhaps</p>
+    </footer>
   </body>
 </html>

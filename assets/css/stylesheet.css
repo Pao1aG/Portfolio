@@ -1,64 +1,196 @@
-*{
+* {
     box-sizing: border-box;
 }
 
 body {
-    background-color: mistyrose;
+    background-color:rgb(250, 250, 250);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .header {
     background-color: grey;
     color: white;
-    margin-top: -15px;
     display: block;
-
+    height: 10%;
 }
 
-h1{
-    text-align: left;
+.title-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+h1 {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    margin-top: 15px;
+    font-size: 40px;
+    margin-top: 10px;
     margin-left: 15px;
+    margin-bottom: -20px;
+    width: 350px;
 }
 
-.header-image{
-    height:85%;
+.header-image {
+    height: 115px;
     width: 100%;
+    margin-top: -50px;
+    margin-bottom: -4px;
     position: relative;
 }
 
-.header nav ul li{
-   list-style-type: none;
-   float: right;
+.header nav ul li a {
+    color: white;
+    font-weight: bold;
+
+}
+
+/* Positions navigation header to the right of the page */
+.header nav ul {
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-end;
+}
+
+.header nav ul li {
+   color: white;
+   font-size: 20px;
    margin-right: 40px;
    margin-bottom: 40px;
+   margin-top: -25px;
+   padding-bottom: 5px;
+   padding-top: 10px;
+   list-style-type: none;
 }
 
-main{
+/* This allows both the aside and cont-flex containers to remain side-by-side */
+main {
     display: flex;
+    margin-top: 20px; 
 }
 
+/* aside takes up 15% of the left side of page */
 aside {
-    flex: 30%;
-    flex-flow: column;
-    justify-content: center;
+    flex: 15%;
+    /* flex-flow: column; */
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    text-align: right;
     padding: 20px;
-    background-color:powderblue;
-    height:100%;
+    height: unset;
+    border: solid 2px black;
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
 }
 
-.content {
-    flex: 70%;
-    flex-flow: column;
-    padding: 20px;
-    background-color: rosybrown;
-    height:100%;
+/* Determines position of aside headers in relation to their content */
+#abt-me {
+    position: relative;
+    top: 0px;
 }
 
-.content p{
+#wrk {
+    position: relative;
+    top: 40px;
+}
+
+#cont-me {
+    position: relative;
+    top: 1214px;
+}
+
+#res {
+    position: relative;
+    top: 1214px;
+
+}
+
+/* image placeholder */
+.sample-img {
+  background-color: #fff;
+  width: 100%;
+  padding: 20px;
+  height: 200px;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+
+/* content-flex takes up 85% of the right side of page */
+.content-flex {
+    flex: 85%;
+    flex-wrap: wrap;
+    padding: 20px;
+    height:100%;
+    margin-left: 5px;
+}
+
+.content-flex p {
     font-size: 20px;
     color:black;
-    text-decoration-line: none;
+}
 
+/* This allows the card containers to pair side-by-side */
+.work {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(31, 26, 31);
+    padding: 10px;
+    margin: 10px;
+    height: 100%;
+    width: 48%;
+}
+
+#large-card {
+    width: 97.3%; 
+}
+
+.card h2 {
+    padding: 10px;
+    width: 30%; 
+    text-align: center;
+    font-size: 80%;
+    background:rgb(211, 160, 160);
+    color: white;
+}
+
+
+footer {
+    background-color: gray;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 15px;
+    padding: 40px;
+    width: 100%;
+}
+
+/* Media Query */
+@media screen and (max-width: 1260px){
+    #large-card {
+        width: 48%;
+    }
+}
+
+@media screen and (max-width: 950px){
+    .card {
+        width: 45%
+    }
+    #large-card {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .card {
+        width: 100%;
+    }
+    #large-card {
+        width: 100%
+    }
 }
