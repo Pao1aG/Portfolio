@@ -8,7 +8,7 @@ body {
 }
 
 .header {
-    background-color: grey;
+    background-color: rgb(160, 158, 158);
     color: white;
     display: block;
     height: 10%;
@@ -139,37 +139,88 @@ aside {
     border-style: solid;
     border-width: 2px;
     border-color: rgb(31, 26, 31);
+    border-radius: 15px;
     padding: 10px;
     margin: 10px;
     height: 100%;
     width: 48%;
 }
 
-.card img {
-    display: block;
-    object-fit: cover;
-    padding: 0;
-    margin: 0;
-
-    
-}
-
 #large-card {
     width: 97.3%; 
+    background-image: url("../images/img-work1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.card h2 {
-    padding: 10px;
-    width: 30%; 
-    text-align: center;
-    font-size: 80%;
-    background:rgb(211, 160, 160);
+#card2 {
+    background-image: url("../images/img-work1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#card3 {
+    background-image: url("../images/img-work1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#card4 {
+    background-image: url("../images/img-work1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#card5 {
+    background-image: url("../images/img-work1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#card6 {
+    background-image: url("../images/img-work1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#card7 {
+    background-image: url("../images/img-work1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#large-card .work-textblock {
+    display: block;
+    width: 14%;
+    height: 90px;
+    background-color: rgb(156, 97, 97);
+    opacity: 95%;
     color: white;
+    padding-left: 10px;
+}
+.work-textblock {
+    display: block;
+    width: 29%;
+    height: 90px;
+    background-color: rgb(156, 97, 97);
+    opacity: 95%;
+    color: white;
+    padding-left: 10px;
 }
 
+.work-textblock h3{
+    font-size: 115%;
+    padding-top: 10px;
+}
+
+.work-textblock p {
+    font-size: 90%;
+    font-weight: bold;
+
+}
 
 footer {
-    background-color: gray;
+    background-color: rgb(160, 158, 158);
     color: white;
     text-align: center;
     font-size: 18px;
@@ -191,6 +242,9 @@ footer {
     }
     #large-card {
         width: 45%;
+    }
+    .work-textblock {
+
     }
 }
 
