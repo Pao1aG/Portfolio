@@ -41,11 +41,13 @@ h1 {
 .header nav ul li a {
     color: white;
     font-weight: bold;
+    font-size: 20px;
 }
 
-/* this pseudo element removes underline from link upon hover*/
+/* this pseudo element removes underline from link and changes font color upon hover*/
 .header nav ul li a:hover {
     text-decoration: none;
+    color:darksalmon;
 }
 
 /* Positions navigation header to the right of the page */
@@ -56,8 +58,6 @@ h1 {
 }
 
 .header nav ul li {
-   color: white;
-   font-size: 20px;
    margin-right: 40px;
    margin-bottom: 40px;
    margin-top: -25px;
@@ -120,6 +120,11 @@ aside {
 .content-flex p {
     font-size: 20px;
     color:black;
+}
+
+.about p{
+    font-size: 14px;
+    font-weight: bold;
 }
 
 /* This allows the card containers to pair side-by-side */
@@ -201,13 +206,13 @@ aside {
     display: block;
     width: 14%;
     height: 90px;
-    background-color: rgb(156, 97, 97);
+    background-color: rgb(185, 124, 124);
     opacity: 95%;
     color: white;
     padding-left: 10px;
 }
 
-.work-textblock 
+.work-textblock {
     display: block;
     width: 29%;
     height: 90px;
@@ -220,6 +225,7 @@ aside {
 .work-textblock h3{
     font-size: 115%;
     padding-top: 10px;
+    font-weight: bold;
 }
 
 .work-textblock p {
