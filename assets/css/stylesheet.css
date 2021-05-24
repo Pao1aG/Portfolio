@@ -94,17 +94,17 @@ aside {
 
 #wrk {
     position: relative;
-    top: 40px;
+    top: 82px;
 }
 
 #cont-me {
     position: relative;
-    top: 620px;
+    top: 670px;
 }
 
 #res {
     position: relative;
-    top: 620px;
+    top: 740px;
 
 }
 
@@ -117,10 +117,13 @@ aside {
     margin-left: 5px;
 }
 
+/* Need to fix the window size problem of moving aside headers */
 .content-flex p {
     color:black;
     font-weight: bold;
     font-size: 14px;
+    line-height: 1.5;
+    padding-top: 10px;
 }
 
 .about {
@@ -142,11 +145,6 @@ aside {
 .profile-desc {
     width: 90%;
     display: block;
-}
-
-.profile-desc p {
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* This allows the card containers inside "work" to pair side-by-side */
@@ -291,22 +289,26 @@ aside {
     text-decoration: underline;
 }
 
-#reveal:hover {
+.reveal:hover {
     cursor: pointer;
 }
 
-#reveal:active {
+.reveal:active {
     color: darksalmon;
 }
 
 /* add a zoom property later */
-.resume img {
-    height: 30%;
-    width: 95%;
+
+.ta-da img {
+    width: 98%;
+}
+
+.resume .ta-da {
     display: none;
 }
 
-#reveal:active img {
+/* when user hovers over area, resume image will appear */
+.resume:hover .ta-da {
     display: block;
 }
 
