@@ -34,4 +34,4 @@ Access the webpage here:
 
 ## Images
 
-![Screenshot of Paola's Portfolio.](assets\images\portfolio-screenshot.png)
+![Screenshot of Paola's Portfolio.](assets/images/portfolio-screenshot.png)
