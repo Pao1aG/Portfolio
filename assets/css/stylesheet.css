@@ -1,6 +1,7 @@
 /* add variables to change colors, font-sizes, etc that are the same throughout document */
 :root {
     --headfoot: rgb(54, 95, 119);
+    --hovercolor: darksalmon;
 }
 
 * {
@@ -39,6 +40,13 @@ h1 {
     width: 600px;
 }
 
+/* Positions navigation header to the right of the page */
+.header nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
 .header nav ul li {
     margin-right: 4vw;
     margin-bottom: 3vw;
@@ -54,17 +62,11 @@ h1 {
     font-size: 1.6vw;
 }
 
-/* Positions navigation header to the right of the page */
-.header nav ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-}
 
 /* this pseudo class removes underline from link and changes font color upon hover*/
 .header nav ul li a:hover {
     text-decoration: none;
-    color:darksalmon;
+    color: var(--hovercolor);
 }
 
 .header-image {
@@ -135,9 +137,7 @@ aside {
 
 .about div {
     width: 90%;
-    height: auto;
     margin-bottom: 8rem;
-    display: block;
 }
 
 .about div p {
@@ -169,6 +169,7 @@ aside {
 /* this pseudo class changes the cursor to pointer and border style upon hover*/
 .card:hover {
     cursor: pointer;
+    border-width: 3px;
     border-style: dashed;
 }
 
@@ -226,7 +227,8 @@ aside {
     display: block;
     width:18vw;
     height: 7vw;
-    background-color: rgb(185, 124, 124);
+    background-color: rgb(189, 132, 132);
+    border-radius: 15px;
     opacity: 95%;
     color: white;
     padding-left: 1rem;
@@ -245,16 +247,20 @@ aside {
     font-weight: bold;
 }
 
-.contact ul {
-    width: 44%;
+.contact ul{
+    width: auto;
     margin-left: auto;
     margin-right: auto;
     margin-top: 4.5rem;
     margin-bottom: 4.5rem;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
 }
 
 .contact ul li {
-    display: inline-block;
+    list-style-type: none;
     text-align: center;
     color: black;
     font-weight: bold;
@@ -271,7 +277,7 @@ aside {
  .contact ul li:hover {
     text-decoration: none;
     cursor: pointer;
-    color:darksalmon;
+    color: var(--hovercolor);
 }
 
 .resume h3 {
@@ -285,13 +291,14 @@ aside {
     text-decoration: underline;
 }
 
-.ta-da img {
-    width: 98%;
-    border: 2px gray solid;
-}
-
 .resume .ta-da {
     display: none;
+}
+
+.ta-da img {
+    width: 98%;
+    margin-top: 5rem;
+    border: 2px gray solid;
 }
 
 /* when user hovers over area, resume image will appear */
@@ -315,22 +322,19 @@ footer {
 }
 
 /* Media Query */
-@media screen and (max-width: 1735px){
+@media screen and (max-width: 1799px){
     #cont-me {
-        top: 78rem;
+        top: 81rem;
     }
 }
 
-@media screen and (max-width: 1609px){
+@media screen and (max-width: 1660px){
    #cont-me {
-       top: 75rem;
+       top: 77rem;
    }
 
     #res {
-        top: 79rem;
-    }
-    .contact ul {
-        width: 46%;
+        top: 80rem;
     }
 }
 
@@ -342,12 +346,9 @@ footer {
     #res {
         top: 77rem;
     }
-    .contact ul {
-        width: 50%;
-    }
 }
 
-@media screen and (max-width: 1306px){
+@media screen and (max-width: 1342px){
     #cont-me {
         top: 70rem;
     }
@@ -364,32 +365,28 @@ footer {
         width: 45%
     }
 
-    .work-textblock{
+    #large-card .work-textblock {
         width: 45%;
     }
 
-    .contact ul {
-        width: 55%;
+    .work-textblock{
+        width: 45%;
     }
 }
 
-@media screen and (max-width: 1123px){
+@media screen and (max-width: 1233px){
    #cont-me {
-       top: 64rem;
-   }
-
-   #res {
        top: 67rem;
    }
 
-    .contact ul {
-        width: 65%;
-    }
+   #res {
+       top: 71rem;
+   }
 }
 
 @media screen and (max-width: 1050px){
     #cont-me {
-        top: 60rem;
+        top: 62rem;
     }
 
     #res {
@@ -411,10 +408,6 @@ footer {
     .work-textblock {
         width: 45%;
     }
-
-    .contact ul {
-        width: 63%;
-    }
 }
 
 @media screen and (max-width: 764px){
@@ -425,9 +418,5 @@ footer {
 
     #res {
         top: 60rem;
-    }
-
-    .contact ul {
-        width: 79%;
     }
 }
