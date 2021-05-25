@@ -1,14 +1,23 @@
+/* add variables to change colors, font-sizes, etc that are the same throughout document */
+:root {
+    --headfoot: rgb(54, 95, 119);
+}
+
 * {
     box-sizing: border-box;
 }
 
+/* VW will be based on this font-size. Idea for rem and vw for font found at Stack Overflow at t.ly/LIsk*/
+html {
+    font-size: 10px;
+}
+
 body {
-    background-color:rgb(250, 250, 250);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .header {
-    background-color: rgb(54, 95, 119);
+    background-color: var(--headfoot);
     color: white;
     display: block;
     height: 10%;
@@ -20,56 +29,57 @@ body {
     justify-content: flex-start;
     align-items: center;
 }
+
+/* set all font sizes to rem so that they change according to window sizing. 1rem= 10px */
 h1 {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 40px;
-    margin-top: 10px;
-    margin-left: 15px;
-    margin-bottom: -20px;
-    width: 350px;
+    font-size: 3.5vw;
+    margin-top: 1vw;
+    margin-left: 1.5vw;
+    margin-bottom: -2vw;
+    width: 600px;
 }
 
-.header-image {
-    height: 115px;
-    width: 100%;
-    margin-top: -50px;
-    margin-bottom: -4px;
-    box-shadow: 0px 1px 1px black;
-    position: relative;
+.header nav ul li {
+    margin-right: 4vw;
+    margin-bottom: 3vw;
+    margin-top: -1vw;
+    padding-bottom: 0.05vw;
+    padding-top: 1vw;
+    list-style-type: none;
 }
 
 .header nav ul li a {
     color: white;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1.6vw;
 }
 
-/* this pseudo element removes underline from link and changes font color upon hover*/
+/* Positions navigation header to the right of the page */
+.header nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+/* this pseudo class removes underline from link and changes font color upon hover*/
 .header nav ul li a:hover {
     text-decoration: none;
     color:darksalmon;
 }
 
-/* Positions navigation header to the right of the page */
-.header nav ul {
-   display: flex;
-   flex-direction: row;
-   justify-content: flex-end;
-}
-
-.header nav ul li {
-   margin-right: 40px;
-   margin-bottom: 40px;
-   margin-top: -25px;
-   padding-bottom: 5px;
-   padding-top: 10px;
-   list-style-type: none;
+.header-image {
+    height: 25%;
+    width: 100%;
+    margin-top: -1vw;
+    margin-bottom: -2vw;
+    position: relative;
 }
 
 /* This allows both the aside and cont-flex containers to remain side-by-side */
 main {
     display: flex;
-    margin-top: 20px; 
+    margin-top: 2vw; 
 }
 
 /* aside takes up 15% of the left side of page */
@@ -78,7 +88,8 @@ aside {
     flex-wrap: wrap;
     justify-content: flex-end;
     text-align: right;
-    padding: 20px;
+    font-size: 1.3vw;
+    padding: 1vw;
     height: unset;
     border: solid 2px black;
     border-top: none;
@@ -94,17 +105,26 @@ aside {
 
 #wrk {
     position: relative;
-    top: 82px;
+    top: 8.2rem;
+}
+
+.profile-pic {
+    display: block;
+    float: left;
+}
+
+.profile-pic img {
+    height: 15vw;   
 }
 
 #cont-me {
     position: relative;
-    top: 670px;
+    top: 83.76rem;
 }
 
 #res {
     position: relative;
-    top: 740px;
+    top: 87.5rem;
 
 }
 
@@ -112,39 +132,23 @@ aside {
 .content-flex {
     flex: 85%;
     flex-wrap: wrap;
-    padding: 20px;
-    height:100%;
-    margin-left: 5px;
+    padding: 2rem;
+    height: 100%;
+    margin-left: 0.05rem;
 }
 
-/* Need to fix the window size problem of moving aside headers */
-.content-flex p {
+.about div {
+    width: 90%;
+    height: auto;
+    margin-bottom: 8rem;
+    display: block;
+}
+
+.about div p {
     color:black;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 1vw;
     line-height: 1.5;
-    padding-top: 10px;
-}
-
-.about {
-    width: 100%;
-}
-
-.profile-pic img {
-    height: 250px;
-    padding-right:0;
-    
-}
-
-.profile-pic {
-    /* width: 10%; */
-    display: block;
-    float: left;
-}
-
-.profile-desc {
-    width: 90%;
-    display: block;
 }
 
 /* This allows the card containers inside "work" to pair side-by-side */
@@ -160,8 +164,8 @@ aside {
     border-width: 2px;
     border-color: rgb(31, 26, 31);
     border-radius: 15px;
-    padding: 10px;
-    margin: 10px;
+    padding: 1rem;
+    margin: 1rem;
     height: 100%;
     width: 48%;
 }
@@ -184,7 +188,6 @@ aside {
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 
 #card2 {
     background-image: url("../images/img-work2.png");
@@ -224,53 +227,58 @@ aside {
 
 #large-card .work-textblock {
     display: block;
-    width: 14%;
-    height: 90px;
+    width:18vw;
+    height: 7vw;
     background-color: rgb(185, 124, 124);
     opacity: 95%;
     color: white;
-    padding-left: 10px;
+    padding-left: 1rem;
 }
 
 .work-textblock {
     display: block;
-    width: 29%;
-    height: 90px;
+    width: 18vw;
+    height: 7vw;
     background-color: rgb(185, 124, 124);
     opacity: 95%;
     color: white;
-    padding-left: 10px;
+    padding-left: 1rem;
 }
 
 .work-textblock h3{
-    font-size: 115%;
-    padding-top: 10px;
+    font-size: 1.3vw;
+    padding-top: 1.5rem;
+    padding-top: 1rem;
     font-weight: bold;
+    text-align: left;
 }
 
 .work-textblock p {
-    font-size: 90%;
+    font-size: 1vw;
     font-weight: bold;
 }
 
 .contact ul {
-    width: 50%;
-    margin-left: 30%;
-    margin-top: 45px;
-    margin-bottom: 45px;
+    width: 44%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4.5rem;
+    margin-bottom: 4.5rem;
 }
 
 .contact ul li {
-    display: inline;
+    display: inline-block;
+    text-align: center;
     color: black;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1.5vw;
     text-decoration: underline;
-    padding-right: 40px;
-    padding-left: 40px;
-    padding-bottom: 10px;
-    padding-top: 10px;
+    padding-right: 4rem;
+    padding-left: 4rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
     border-right: 1px solid black;
+    border-left: 1px solid black ;
 }
 
  .contact ul li:hover {
@@ -279,19 +287,19 @@ aside {
 }
 
 .resume h3 {
-    font-size: 20px;
+    font-size: 1.7vw;
     text-align: center;
 }
 
 .resume p {
-    font-size: 14px;
+    font-size: 1vw;
     text-align: center;
     text-decoration: underline;
 }
 
-.reveal:hover {
+/* .reveal:hover {
     cursor: pointer;
-}
+} */
 
 .reveal:active {
     color: darksalmon;
@@ -301,6 +309,7 @@ aside {
 
 .ta-da img {
     width: 98%;
+    border: 2px gray solid;
 }
 
 .resume .ta-da {
@@ -313,59 +322,57 @@ aside {
 }
 
 footer {
-    background-color: rgb(54, 95, 119);
+    background-color: var(--headfoot);
     color: white;
     text-align: center;
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: bold;
-    margin-top: 15px;
-    padding: 40px;
+    margin-top: 1.5rem;
+    padding: 4rem;
     width: 100%;
 }
 
-
 /* Media Query */
-@media screen and (max-width: 1260px){
-    .card {
-        width: 47%;
-    }
-    #large-card {
-        width: 47%;
-    }
-    #large-card .work-textblock {
-        width: 45%; 
-    }
-    .work-textblock {
-        width: 45%;
-    }
-}
-
-/* Cards were losing their place at this width. FIXED */
 @media screen and (max-width: 1306px){
+
     #large-card{
         width: 45%;
     }
-    #large-card .work-textblock{
-        width: 45%;
-    }
+
     .card{
         width: 45%
     }
+
     .work-textblock{
         width: 45%;
     }
 }
 
 @media screen and (max-width: 1050px){
+    /* #wrk {
+        top: 110px;
+    }
+
+    #cont-me {
+        top: 1142px;
+    }
+
+    #res {
+        top: 1232px;
+    } */
+
     .card {
         width: 100%;
     }
+
     #large-card {
         width: 100%
     }
+
     #large-card .work-textblock {
         width: 40%; 
     }
+
     .work-textblock {
         width: 40%;
     }
