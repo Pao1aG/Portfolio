@@ -7,7 +7,7 @@
     box-sizing: border-box;
 }
 
-/* VW will be based on this font-size. Idea for rem and vw for font found at Stack Overflow at t.ly/LIsk*/
+/* vw will be based on this font-size. Idea for rem and vw values for fonts found at Stack Overflow at t.ly/LIsk*/
 html {
     font-size: 10px;
 }
@@ -30,7 +30,6 @@ body {
     align-items: center;
 }
 
-/* set all font sizes to rem so that they change according to window sizing. 1rem= 10px */
 h1 {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 3.5vw;
@@ -91,10 +90,7 @@ aside {
     font-size: 1.3vw;
     padding: 1vw;
     height: unset;
-    border: solid 2px black;
-    border-top: none;
-    border-left: none;
-    border-bottom: none;
+    border-right: solid 2px black;
 }
 
 /* Determines position of aside headers and can be changed to be next to related content */
@@ -105,7 +101,7 @@ aside {
 
 #wrk {
     position: relative;
-    top: 8.2rem;
+    top: 10.2rem;
 }
 
 .profile-pic {
@@ -151,7 +147,7 @@ aside {
     line-height: 1.5;
 }
 
-/* This allows the card containers inside "work" to pair side-by-side */
+/* This allows the card containers inside .work to pair side-by-side */
 .work {
     display: flex;
     flex-direction: row;
@@ -170,7 +166,7 @@ aside {
     width: 48%;
 }
 
-/* this pseudo class change the cursor to pointer and border style upon hover*/
+/* this pseudo class changes the cursor to pointer and border style upon hover*/
 .card:hover {
     cursor: pointer;
     border-style: dashed;
@@ -225,19 +221,10 @@ aside {
     background-size: cover;
 }
 
-#large-card .work-textblock {
-    display: block;
-    width:18vw;
-    height: 7vw;
-    background-color: rgb(185, 124, 124);
-    opacity: 95%;
-    color: white;
-    padding-left: 1rem;
-}
-
+#large-card .work-textblock,
 .work-textblock {
     display: block;
-    width: 18vw;
+    width:18vw;
     height: 7vw;
     background-color: rgb(185, 124, 124);
     opacity: 95%;
@@ -282,6 +269,7 @@ aside {
 }
 
  .contact ul li:hover {
+    text-decoration: none;
     cursor: pointer;
     color:darksalmon;
 }
@@ -296,16 +284,6 @@ aside {
     text-align: center;
     text-decoration: underline;
 }
-
-/* .reveal:hover {
-    cursor: pointer;
-} */
-
-.reveal:active {
-    color: darksalmon;
-}
-
-/* add a zoom property later */
 
 .ta-da img {
     width: 98%;
@@ -332,8 +310,51 @@ footer {
     width: 100%;
 }
 
+.caffeine::after {
+    content: "☕";
+}
+
 /* Media Query */
+@media screen and (max-width: 1735px){
+    #cont-me {
+        top: 78rem;
+    }
+}
+
+@media screen and (max-width: 1609px){
+   #cont-me {
+       top: 75rem;
+   }
+
+    #res {
+        top: 79rem;
+    }
+    .contact ul {
+        width: 46%;
+    }
+}
+
+@media screen and (max-width: 1489px){
+    #cont-me {
+        top: 74rem;
+    }
+
+    #res {
+        top: 77rem;
+    }
+    .contact ul {
+        width: 50%;
+    }
+}
+
 @media screen and (max-width: 1306px){
+    #cont-me {
+        top: 70rem;
+    }
+
+    #res {
+        top: 73rem;
+    }
 
     #large-card{
         width: 45%;
@@ -346,34 +367,67 @@ footer {
     .work-textblock{
         width: 45%;
     }
+
+    .contact ul {
+        width: 55%;
+    }
+}
+
+@media screen and (max-width: 1123px){
+   #cont-me {
+       top: 64rem;
+   }
+
+   #res {
+       top: 67rem;
+   }
+
+    .contact ul {
+        width: 65%;
+    }
 }
 
 @media screen and (max-width: 1050px){
-    /* #wrk {
-        top: 110px;
-    }
-
     #cont-me {
-        top: 1142px;
+        top: 60rem;
     }
 
     #res {
-        top: 1232px;
+        top: 67rem;
     } */
 
     .card {
-        width: 100%;
+        width: 45%;
     }
 
     #large-card {
-        width: 100%
+        width: 45%
     }
 
     #large-card .work-textblock {
-        width: 40%; 
+        width: 44%; 
     }
 
     .work-textblock {
-        width: 40%;
+        width: 45%;
+    }
+
+    .contact ul {
+        width: 63%;
+    }
+}
+
+@media screen and (max-width: 764px){
+    #cont-me {
+        /* top: 690px; */
+        top: 55rem;
+    }
+
+    #res {
+        top: 60rem;
+    }
+
+    .contact ul {
+        width: 79%;
     }
 }
