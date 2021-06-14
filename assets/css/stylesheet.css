@@ -301,10 +301,21 @@ aside {
     text-align: center;
 }
 
-.resume p {
+#downloadDiv {
     font-size: 1vw;
     text-align: center;
-    text-decoration: underline;
+    color:black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#downloadDiv a {
+    color:black;
+}
+
+#downloadDiv a:hover {
+    color: var(--hovercolor);
 }
 
 .resume .ta-da {
