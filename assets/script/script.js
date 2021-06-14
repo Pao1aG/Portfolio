@@ -18,11 +18,11 @@ linkedin.addEventListener("click", function(event) {
 });
 
 //Event listeners for Cards----------------------
-//large card will be project1
-// var largeCard = document.querySelector("#large-card");
-// largeCard.addEventListener("click", function(event) {
-//     window.open('', '_blank');
-// });
+// LARGE CARD
+var largeCard = document.querySelector("#large-card");
+largeCard.addEventListener("click", function(event) {
+    window.open('https://jman4342.github.io/Hair-Dresser/Hairdresser.html', '_blank');
+});
 
 //CARD2
 var card2 = document.querySelector("#card2");

@@ -188,13 +188,13 @@ aside {
 }
 
 #card2 {
-    background-image: url("../images/img-work2.png");
+    background-image: url("../images/img-work3.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #card3 {
-    background-image: url("../images/img-work3.png");
+    background-image: url("../images/img-work2.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
