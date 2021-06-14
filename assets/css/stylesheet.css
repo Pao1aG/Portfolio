@@ -11,6 +11,7 @@
 /* vw will be based on this font-size. Idea for rem and vw values for fonts found at Stack Overflow at t.ly/LIsk*/
 html {
     font-size: 10px;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -280,6 +281,21 @@ aside {
     color: var(--hovercolor);
 }
 
+.contact ul #email:hover::after {
+    content: ": paolaagonzalezm@email.arizona.edu";
+    color: black;
+}
+
+.contact ul #github:hover::after {
+    content: ": Pao1aG";
+    color: black;
+}
+
+.contact ul #linkedin:hover::after {
+    content: ": in/paolaagonzalezm/";
+    color: black;
+}
+
 .resume h3 {
     font-size: 1.7vw;
     text-align: center;
@@ -402,17 +418,22 @@ footer {
     }
 
     #large-card .work-textblock {
-        width: 44%; 
+        width: 50%; 
     }
 
     .work-textblock {
-        width: 45%;
+        width: 50%;
     }
 }
 
 @media screen and (max-width: 764px){
+    #large-card .work-textblock {
+        width:60%;
+    }
+    .work-textblock {
+        width: 60%;
+    }
     #cont-me {
-        /* top: 690px; */
         top: 55rem;
     }
 
