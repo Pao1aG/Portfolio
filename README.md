@@ -5,6 +5,7 @@
 * Description
 * Usage
 * Images
+* License
 
 ---
 
@@ -35,3 +36,7 @@ Access the webpage here:
 ## Images
 
 ![Screenshot of Paola's Portfolio.](assets/images/portfolio-screenshot.png)
+
+## License
+
+This project is licensed under MIT License.
