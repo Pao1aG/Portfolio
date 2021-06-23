@@ -52,5 +52,12 @@ card5.addEventListener("click", function(event) {
     window.open('https://github.com/Pao1aG/Code-Quiz', '_blank');
 })
 
+//CARD6
+var card6 = document.querySelector("#card6");
+card6.addEventListener("click", function(event) {
+    event.preventDefault();
+    window.open('https://github.com/Pao1aG/Team-Profile-Generator', '_blank');
+})
+
 
 
