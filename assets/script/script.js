@@ -14,7 +14,7 @@ github.addEventListener("click", function(event) {
 var linkedin = document.querySelector("#linkedin");
 linkedin.addEventListener("click", function(event) {
     event.preventDefault();
-    window.open('https://www.linkedin.com/in/paola-gonzalez-martinez-14b641117/','_blank');
+    window.open('https://www.linkedin.com/in/paolaagonzalezm/','_blank');
 });
 
 //Event listeners for Cards----------------------
